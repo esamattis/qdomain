@@ -11,19 +11,21 @@ function promiseInDomain(fn) {
     promiseDomain.run(function() {
         process.nextTick(function() {
             var res = fn(defer);
+            // If promise is returned use that to resolve the final promise
             if (res && typeof res.then === "function") {
                 defer.resolve(res);
             }
         });
     });
 
+    // Before resolving the promise for the user dispose the domain
     function end(res) {
-        var d2 = Q.defer();
+        var endDefer = Q.defer();
         process.nextTick(function() {
             promiseDomain.dispose();
-            d2.resolve(res);
+            endDefer.resolve(res);
         });
-        return d2.promise;
+        return endDefer.promise;
     }
 
     return defer.promise.then(end, function(err) {
