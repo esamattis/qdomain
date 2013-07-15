@@ -1,4 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/epeli/qdomain.png?branch=master)](https://travis-ci.org/epeli/qdomain)
+[![Build Status](https://travis-ci.org/epeli/qdomain.png?branch=master)](https://travis-ci.org/epeli/qdomain)
 
 # qdomain - Promises from domains
 
