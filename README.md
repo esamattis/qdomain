@@ -2,7 +2,7 @@
 # qdomain - Promises from domains
 
 Small experiment combining node.js [domain][] error handling with promises
-using the [q][] library.
+using the [Q][] library.
 
 Using domains it is possible to capture unhandled asynchronous exceptions.
 This module wraps that magic to promises.
@@ -28,9 +28,10 @@ qdomain(function(defer){
 `qdomain` takes a callback and returns a promise. That callback can be resolved
 or rejected using following methods:
 
-  1. Throw an exception on this tick, the next or whatever. That's the magic
+  1. Throw an exception on this tick, the next or whenever. That's the magic
      of domains!
   2. Call `resolve` or `reject` on the given defer object
+    - It's full [Q defer object][defer]
   3. Return another promise
 
 This makes it easy to capture stream errors while piping for example
@@ -53,4 +54,5 @@ qdomain(function(defer){
     npm install qdomain
 
 [domain]: http://nodejs.org/api/domain.html
-[q]: https://github.com/kriskowal/q
+[Q]: https://github.com/kriskowal/q
+[defer]: https://github.com/kriskowal/q/wiki/API-Reference#qdefer
