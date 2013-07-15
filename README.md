@@ -49,10 +49,22 @@ qdomain(function(defer){
 });
 ```
 
+## Note about domain disposing
+
+When the promise is resolved or rejected the domain associated with it will be
+[disposed][dispose] automatically. Which means all IO and timers must be
+completed before resolving the promise or they will be canceled! This has few
+nice features:
+
+  - No more errors can be thrown from the `qdomain` callback
+  - You can be sure that all IO started from the callback has been completed
+    (or canceled) when the promise is resolved or rejected.
+
 ## Install
 
     npm install qdomain
 
 [domain]: http://nodejs.org/api/domain.html
 [Q]: https://github.com/kriskowal/q
+[dispose]: http://nodejs.org/api/domain.html#domain_domain_dispose
 [defer]: https://github.com/kriskowal/q/wiki/API-Reference#qdefer
