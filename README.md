@@ -33,7 +33,7 @@ or rejected using following methods:
   2. Call `resolve` or `reject` on the given defer object
   3. Return another promise
 
-This makes it easy to capture stream error while piping for example
+This makes it easy to capture stream errors while piping for example
 
 ```javascript
 qdomain(function(defer){
@@ -47,6 +47,10 @@ qdomain(function(defer){
   // Any IO errors or transform errors will be handled here
 });
 ```
+
+## Install
+
+    npm install qdomain
 
 [domain]: http://nodejs.org/api/domain.html
 [q]: https://github.com/kriskowal/q
