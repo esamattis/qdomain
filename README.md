@@ -25,11 +25,11 @@ qdomain(function(defer){
 });
 ```
 
-`qdomain` takes a callback and returns a promise. That callback can be resolved
-or rejected using following methods:
+`qdomain` takes a callback and returns a promise. It can be resolved or
+rejected using following methods:
 
-  1. Throw an exception on this tick, the next or whenever. That's the magic
-     of domains!
+  1. Throw an exception on this tick, the next or whenever to reject it. That's
+     the magic of domains!
   2. Call `resolve` or `reject` on the given defer object
     - It's full [Q defer object][defer]
   3. Return another promise
