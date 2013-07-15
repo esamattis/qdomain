@@ -1,0 +1,18 @@
+{
+  "name": "qdomain",
+  "version": "0.0.1",
+  "description": "Capture async exceptions to promises using domains",
+  "main": "index.js",
+  "scripts": {
+    "test": "sh run-tests.sh"
+  },
+  "keywords": [
+    "q",
+    "promises"
+  ],
+  "author": "Esa-Matti Suuronen",
+  "license": "MIT",
+  "dependencies": {
+    "q": "~0.9.6"
+  }
+}
