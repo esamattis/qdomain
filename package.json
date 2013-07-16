@@ -1,6 +1,6 @@
 {
   "name": "qdomain",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Capture async exceptions to promises using domains",
   "main": "index.js",
   "scripts": {
