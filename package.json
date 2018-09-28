@@ -19,6 +19,6 @@
   "author": "Esa-Matti Suuronen",
   "license": "MIT",
   "dependencies": {
-    "q": "~0.9.6"
+    "q": "~1.5.1"
   }
 }

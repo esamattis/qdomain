@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/epeli/qdomain.png?branch=master)](https://travis-ci.org/epeli/qdomain)
+[![Build Status](https://travis-ci.org/epeli/qdomain.png?branch=master)](https://travis-ci.org/epeli/qdomain) [![Greenkeeper badge](https://badges.greenkeeper.io/epeli/qdomain.svg)](https://greenkeeper.io/)
 
 # qdomain - Promises from domains
 
